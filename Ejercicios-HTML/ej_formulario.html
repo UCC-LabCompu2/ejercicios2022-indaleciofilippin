@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio Formulario</title>
@@ -18,26 +18,62 @@
     https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output-->
 
 <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
-Nombre:
-Apellido:
-Sexo: Masculino Femenino
-Edad:
-Email:
-Usuario:
-Password:
-Confirmar Password:
-
-Tipo de servicio: Free / Standard / Premium
-Tema:
-Política
-Negocios
-Tecnología
-Salud
-
-Agregue un comentario:
-
-Boton de Enviar
-
+<form name="form_suscripcion">
+    <p>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" size="40">
+    </p>
+    <p>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido" size="40">
+    </p>
+    <p>
+        Sexo: <input type="radio" name="sexo" id="radioMasc" value="masculino"> <label for="radioMasc">Masculino</label>
+        <input type="radio" name="sexo" id="radioFem" value="femenino"> <label for="radioFem">Femenino</label>
+    </p>
+    <p>
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad" min="0">
+    </p>
+    <p>
+        <label for="mail">Email:</label>
+        <input type="email" name="mail" id="mail" placeholder="usuario@email.com" size="40">
+    </p>
+    <p>
+        <label for="nombreUsuario">Usuario:</label>
+        <input type="text" name="usuario" id="nombreUsuario" placeholder="Ingrese su Nombre de Usuario" size="40">
+    </p>
+    <p>
+        <label for="pass">Password:</label>
+        <input type="password" name="password" id="pass" placeholder="Contraseña" size="40" maxlength="12">
+    </p>
+    <p>
+        <label for="confirmPass">Confirmar Password:</label>
+        <input type="password" name="password" id="confirmPass" placeholder="Confirmar Contraseña" size="40" maxlength="12">
+    </p>
+    <p>
+        <label for="tipoServicio">Tipo de servicio:</label>
+        <select name="tipoServicio" id="tipoServicio">
+            <option value="free">Free</option>
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+        </select>
+    </p>
+    <p>
+        <label>Tema:</label>
+        <input type="checkbox" name="politica" value="politica" id="temaPolitica"><label for="temaPolitica">Política</label>
+        <input type="checkbox" name="negocios" value="negocios" id="temaNegocios"><label for="temaNegocios">Negocios</label>
+        <input type="checkbox" name="tecnologia" value="tecnologia" id="temaTecnologia"><label for="temaTecnologia">Tecnología</label>
+        <input type="checkbox" name="salud" value="salud" id="temaSalud"><label for="temaSalud">Salud</label>
+    </p>
+    <p>
+        <label for="comentario">Agregue un Comentario:</label><br>
+        <textarea name="comentario" id="comentario" placeholder="Agregue un comentario:" rows="5" cols="40" ></textarea>
+    </p>
+    <p>
+        <button>Boton de Enviar</button>
+    </p>
+</form>
 
 </body>
 </html>
